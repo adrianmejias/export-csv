@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Export to CSV</title>
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script src="export-csv.js"></script>
+	</head>
+	<body>
+		<h1>Export to CSV</h1>
+		<p>
+			<a href="#" id="export-csv-btn">[Download CSV File]</a>
+		</p>
+		<table id="export-table" border="1" cellspacing="3" cellpadding="5" width="600">
+			<thead>
+				<tr>
+					<th>header 1</th>
+					<th>header 2</th>
+					<th data-ignore="true">header 3*</th>
+					<th>header 4</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>data 1</td>
+					<td>data 2</td>
+					<td>data 3</td>
+					<td>data 4</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			<small>*Will not be exported due to 'data-ignore' attribute when used on 'th' tag.</small>
+		</p>
+		<script>
+		$ ( function ( )
+		{
+			$ ( '#export-csv-btn' ).click ( function ( e )
+			{
+				e.preventDefault ( );
+				$ ( '#export-table' ).exportCSV ( );
+			} );
+		} );
+		</script>
+	</body>
+</html>
