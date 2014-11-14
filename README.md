@@ -7,6 +7,8 @@ Example tabular data and usage
 ------------
 
 ```html
+<!-- Include jQuery Beforehand -->
+<script src="export-csv.js"></script>
 <table>
 <tr>
   <th>First Name</th>
