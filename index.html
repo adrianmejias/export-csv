@@ -4,34 +4,52 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Export to CSV</title>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		<script src="export-csv.js"></script>
 	</head>
 	<body>
-		<h1>Export to CSV</h1>
-		<table border="1" cellspacing="3" cellpadding="5" width="600">
-			<thead>
-				<tr>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th data-ignore="true">Date of Birth*</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>John</td>
-					<td>Doe</td>
-					<td>03/11/1983</td>
-				</tr>
-			</tbody>
-		</table>
-		<p>
-			<small>*Will not be exported due to 'data-ignore' attribute when used on 'th' tag.</small>
-		</p>
-		<p>
-			<button type="button">Download CSV File</button>
-		</p>
+		<div class="container">
+			<div class="row">
+				<h1>Export to CSV</h1>
+				<table class="table table-bordered table-striped table-hover">
+					<thead>
+						<tr>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th data-ignore="true">Date of Birth*</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>John</td>
+							<td>Doe</td>
+							<td>03/11/1983</td>
+						</tr>
+						<tr>
+							<td>Jane</td>
+							<td>Doe</td>
+							<td>08/22/1982</td>
+						</tr>
+						<tr>
+							<td>Rick</td>
+							<td>James</td>
+							<td>02/01/1948</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>
+					<small>*Will not be exported due to <strong>data-ignore</strong> attribute when used on <strong>th</strong> tag.</small>
+				</p>
+				<p>
+					<button type="button" class="btn btn-primary"><span class="fa fa-file-excel-o"></span> Download CSV File</button>
+				</p>
+			</div>
+		</div>
 		<script>
 		$ ( function ( )
 		{

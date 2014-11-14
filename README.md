@@ -6,6 +6,8 @@ Export tabular data to CSV format.
 Example tabular data and usage
 ------------
 
+**Demo:** https://adrianmejias.com/export-csv
+
 ```html
 <!-- Include jQuery Beforehand -->
 <script src="export-csv.js"></script>
