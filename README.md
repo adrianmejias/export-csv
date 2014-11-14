@@ -43,6 +43,6 @@ $('table').exportCSV({
   headers: ['First Name', 'Last Name', 'Birthdate'],
   filename: 'export.csv',
   ignore: [2],
-  servrr: function (){}
+  server: function (){}
 });
 ```
